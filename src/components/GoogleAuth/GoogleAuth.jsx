@@ -9,7 +9,7 @@ import { GoogleLoginButton } from "react-social-login-buttons";
 
 
 const clientId =
-  "521123783257-d2stfpejph6ok0djqqpm8e396dsg10c5.apps.googleusercontent.com";
+  "64033468835-sjfdv56e8hvmp4dauh8tm2ljg86f8fja.apps.googleusercontent.com";
 
 const GoogleAuth = ({ onGoogleLoginSuccess }) => {
   const dispatch = useDispatch();
