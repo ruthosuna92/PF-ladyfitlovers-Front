@@ -22,6 +22,7 @@ const GoogleAuth = ({ onGoogleLoginSuccess }) => {
     }
   }, [userId]);
   const onSuccess = (data) => {
+    console.log(data)
     let profileObj = data;
     let accessToken = data.access_token;
     if (profileObj.family_name == undefined) {
@@ -44,6 +45,7 @@ const GoogleAuth = ({ onGoogleLoginSuccess }) => {
   return (
     <LoginSocialGoogle
       client_id={clientId}
+      scope="email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
       onResolve={({ provider, data }) => {
         onSuccess(data)
       }}
